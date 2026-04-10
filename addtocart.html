@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Cart | NextGenPC</title>
+<link rel="stylesheet" href="common.css">
+
+<style>
+.container{
+    padding:30px;
+}
+
+.cart-item{
+    background:#fff;
+    padding:15px;
+    margin-bottom:12px;
+    border-radius:5px;
+    box-shadow:0 0 5px rgba(0,0,0,0.1);
+}
+
+.qty-box{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+
+.qty-box button{
+    padding:5px 10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.remove-btn{
+    background:red;
+    color:#fff;
+    border:none;
+    padding:6px 12px;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+.buy-btn{
+    background:#22c55e;
+    color:#fff;
+    border:none;
+    padding:12px 20px;
+    font-size:16px;
+    cursor:pointer;
+    border-radius:5px;
+    margin-top:20px;
+}
+
+.total{
+    font-size:20px;
+    font-weight:bold;
+    margin-top:20px;
+}
+
+/* ===== MODAL ===== */
+.modal-overlay{
+    display:none;
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.modal{
+    width:500px;
+    height:200px;
+    background:#fff;
+    border-radius:10px;
+    padding:30px;
+    text-align:center;
+    position:relative;
+}
+
+.modal button{
+    padding:10px 20px;
+    margin:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.confirm-btn{
+    background:#16a34a;
+    color:#fff;
+    border:none;
+}
+
+.cancel-btn{
+    background:#ef4444;
+    color:#fff;
+    border:none;
+}
+
+.confetti{
+    position:fixed;
+    width:10px;
+    height:10px;
+    background:red;
+    animation:fall 3s linear infinite;
+}
+
+@keyframes fall{
+    0%{transform:translateY(-10px) rotate(0deg);}
+    100%{transform:translateY(100vh) rotate(360deg);}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>The NextGenPC</h1>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="product.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="addtocart.html">🛒</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>My Cart</h2>
+    <div id="cart"></div>
+    <div class="total" id="total"></div>
+
+    <button class="buy-btn" onclick="openModal()">Buy Now</button>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+    <div class="modal">
+        <h2>Confirm Purchase</h2>
+        <p>Are you sure you want to place this order?</p>
+
+        <button class="confirm-btn" onclick="confirmOrder()">Yes, Place Order</button>
+        <button class="cancel-btn" onclick="closeModal()">No</button>
+
+        <h3 id="successMsg" style="display:none;color:green;margin-top:20px;">
+            ✅ Order Placed Successfully
+        </h3>
+    </div>
+</div>
+
+<footer>
+    © 2026 NextGenPC | All Rights Reserved
+</footer>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cartDiv = document.getElementById("cart");
+let totalDiv = document.getElementById("total");
+
+function displayCart(){
+    cartDiv.innerHTML="";
+    let total=0;
+
+    cart.forEach((item,i)=>{
+        total+=item.productPrice*item.qty;
+        cartDiv.innerHTML+=`
+        <div class="cart-item">
+            <h4>${item.productName}</h4>
+            <p>₹${item.productPrice}</p>
+            <div class="qty-box">
+                <button onclick="changeQty(${i},-1)">−</button>
+                <b>${item.qty}</b>
+                <button onclick="changeQty(${i},1)">+</button>
+            </div>
+        </div>`;
+    });
+
+    totalDiv.innerText="Total: ₹"+total;
+}
+
+function changeQty(i,val){
+    cart[i].qty+=val;
+    if(cart[i].qty<=0) cart.splice(i,1);
+    save();
+}
+
+function save(){
+    localStorage.setItem("cart",JSON.stringify(cart));
+    displayCart();
+}
+
+/* ===== MODAL ===== */
+function openModal(){
+    document.getElementById("modal").style.display="flex";
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display="none";
+}
+
+function confirmOrder(){
+    document.getElementById("successMsg").style.display="block";
+    launchConfetti();
+    localStorage.removeItem("cart");
+}
+
+/* ===== CONFETTI ===== */
+function launchConfetti(){
+    for(let i=0;i<100;i++){
+        let c=document.createElement("div");
+        c.className="confetti";
+        c.style.left=Math.random()*100+"vw";
+        c.style.background=`hsl(${Math.random()*360},100%,50%)`;
+        c.style.animationDuration=2+Math.random()*3+"s";
+        document.body.appendChild(c);
+
+        setTimeout(()=>c.remove(),3000);
+    }
+}
+
+displayCart();
+</script>
+
+</body>
+</html>

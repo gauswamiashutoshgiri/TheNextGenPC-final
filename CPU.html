@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top CPUs - The NextGenPC</title>
+    <link rel="stylesheet" href="common.css">
+
+    <style>
+        .hero {
+
+            background-image: url(https://assets2.razerzone.com/images/pnx.assets/93f63e2ce9f09b098adb63a8e14cb7eb/1200x630.jpg);
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero h2 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .hero p {
+            margin-top: 10px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The NextGenPC</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="RAM.html">RAM</a>
+            <a href="GPU.html">GPU</a>
+            <a href="storage.html">Storage</a>
+            <a href="addtocart.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+  <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
+  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+</svg></a>
+        </nav>
+    </header>
+        
+
+    <section class="hero">
+        <h2>Top CPUs Available</h2>
+        <p>High-performance processors at best prices</p>
+    </section>
+
+    <section class="products">
+
+        <div class="card">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&q=80" alt="Intel Core i9-13900K" class="card-img">
+                <h3>Intel Core i9-13900K</h3>
+                <p>16 Cores, 24 Threads<br>Up to 5.8 GHz</p>
+                        <div class="price">₹4,499</div>
+                        <button>Buy Now</button>
+                        <button onclick="addToCart('Intel Core i9-13900K', 4499)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                                </svg>
+                        </button>
+        </div>
+
+        <div class="card">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=400&q=80" alt="AMD Ryzen 9 7950X" class="card-img">
+                <h3>AMD Ryzen 9 7950X</h3>
+                <p>16 Cores, 32 Threads<br>Up to 5.7 GHz</p>
+                        <div class="price">₹6,999</div>
+                        <button>Buy Now</button>
+                        <button onclick="addToCart('AMD Ryzen 9 7950X', 6999)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                                </svg>
+                        </button>
+        </div>
+
+        <div class="card">
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=400&q=80" alt="Intel Core i7-13700K" class="card-img">
+                <h3>Intel Core i7-13700K</h3>
+                <p>16 Cores, 24 Threads<br>Up to 5.4 GHz</p>
+                        <div class="price">₹4,099</div>
+                        <button>Buy Now</button>
+                        <button onclick="addToCart('Intel Core i7-13700K', 4099)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                                </svg>
+                        </button>
+        </div>
+
+        <div class="card">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&q=80" alt="AMD Ryzen 7 7700X" class="card-img">
+                <h3>AMD Ryzen 7 7700X</h3>
+                <p>8 Cores, 16 Threads<br>Up to 5.4 GHz</p>
+                        <div class="price">₹3,499</div>
+                        <button>Buy Now</button>
+                        <button onclick="addToCart('AMD Ryzen 7 7700X', 3499)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                                </svg>
+                        </button>
+        </div>
+
+        <div class="card">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&q=80" alt="Intel Core i5-13600K" class="card-img">
+                <h3>Intel Core i5-13600K</h3>
+                <p>14 Cores, 20 Threads<br>Up to 5.1 GHz</p>
+                        <div class="price">₹3,199</div>
+                        <button>Buy Now</button>
+                        <button onclick="addToCart('Intel Core i5-13600K', 3199)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                                </svg>
+                        </button>
+        </div>
+
+        <div class="card">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&q=80" alt="AMD Ryzen 5 7600X" class="card-img">
+                <h3>AMD Ryzen 5 7600X</h3>
+                <p>6 Cores, 12 Threads<br>Up to 4.7 GHz</p>
+                        <div class="price">₹2,499</div>
+                        <button>Buy Now</button>
+                        <button onclick="addToCart('AMD Ryzen 5 7600X', 2499)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                                </svg>
+                        </button>
+        </div>
+
+        <div class="card">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&q=80" alt="Intel Core i5-13400" class="card-img">
+                <h3>Intel Core i5-13400</h3>
+                <p>10 Cores, 16 Threads<br>Up to 4.6 GHz</p>
+                        <div class="price">₹2,199</div>
+                        <button>Buy Now</button>
+                        <button onclick="addToCart('Intel Core i5-13400', 2199)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                                </svg>
+                        </button>
+        </div>
+
+        <div class="card">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80" alt="Intel Core i3-13100" class="card-img">
+                <h3>Intel Core i3-13100</h3>
+                <p>4 Cores, 8 Threads<br>Up to 4.4 GHz</p>
+                        <div class="price">₹1,299</div>
+                        <button>Buy Now</button>
+                        <button onclick="addToCart('Intel Core i3-13100', 1299)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                                </svg>
+                        </button>
+        </div>
+
+        <div class="card">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=400&q=80" alt="Intel Pentium Gold G7400" class="card-img">
+                <h3>Intel Pentium Gold G7400</h3>
+                <p>2 Cores, 4 Threads<br>Up to 4.0 GHz</p>
+                        <div class="price">₹64.99</div>
+                        <button>Buy Now</button>
+                        <button onclick="addToCart('Intel Pentium Gold G7400', 65)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                                </svg>
+                        </button>
+        </div>
+
+            <!-- More CPU cards -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&q=80" alt="AMD Ryzen 3 4100" class="card-img">
+                <h3>AMD Ryzen 3 4100</h3>
+                <p>4 Cores, 8 Threads<br>Up to 4.0 GHz</p>
+                        <div class="price">₹8,999</div>
+                        <button>Buy Now</button>
+                        <button onclick="addToCart('AMD Ryzen 3 4100', 8999)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                                </svg>
+                        </button>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=400&q=80" alt="Intel Core i9-12900K" class="card-img">
+                <h3>Intel Core i9-12900K</h3>
+                <p>16 Cores, 24 Threads<br>Up to 5.2 GHz</p>
+                        <div class="price">₹5,999</div>
+                        <button>Buy Now</button>
+                        <button onclick="addToCart('Intel Core i9-12900K', 5999)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                                </svg>
+                        </button>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&q=80" alt="AMD Ryzen 5 5600X" class="card-img">
+                <h3>AMD Ryzen 5 5600X</h3>
+                <p>6 Cores, 12 Threads<br>Up to 4.6 GHz</p>
+                        <div class="price">₹12,499</div>
+                        <button>Buy Now</button>
+                        <button onclick="addToCart('AMD Ryzen 5 5600X', 12499)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                                </svg>
+                        </button>
+            </div>
+
+    </section>
+
+    <footer>
+        © 2026 The NextGenPC | All Rights Reserved <br>
+        @ Designed By Gauswami Ashutoshgiri G.
+    </footer>
+
+</body>
+<script>
+function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let existing = cart.find(item => item.productName === name);
+    if (existing) {
+        existing.qty += 1;
+    } else {
+        cart.push({
+            productName: name,
+            productPrice: price,
+            qty: 1
+        });
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(name + " added to cart");
+}
+</script>
+</html>
