@@ -132,10 +132,6 @@ body {
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            /* ...existing code... */
-        }
-
-        .card {
             background: rgba(255, 255, 255, 0.25);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.5);
